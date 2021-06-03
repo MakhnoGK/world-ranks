@@ -1,7 +1,7 @@
 import React        from 'react';
 import Head         from 'next/head';
 
-import LayoutStyled from '../styled/Layout.styled';
+import LayoutStyled from '../styled/components/Layout.styled';
 
 const Layout = ({ children, title = 'World ranks' }) => (
     <LayoutStyled>

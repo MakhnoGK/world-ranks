@@ -1,6 +1,6 @@
 import styled     from 'styled-components';
 
-import { colors } from './constants';
+import { colors } from '../constants';
 
 const LayoutStyled = styled.div`
     padding: 24px;
@@ -21,6 +21,11 @@ const LayoutStyled = styled.div`
                 color: ${colors.primary};
             }
         }
+    }
+
+    .count {
+        margin: 12px 0;
+        color: ${colors.textSecondary};
     }
 
     .footer {

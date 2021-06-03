@@ -1,10 +1,13 @@
-import Layout from '../components/Layout';
+import Layout      from '../components/Layout';
+
+import SearchInput from '../components/SearchInput';
 
 const Index = ({ countries }) => (
     <Layout>
         <div className='count'>
             Found {countries.length} countries
         </div>
+        <SearchInput placeholder='Filter by name, region or subregion' />
     </Layout>
 );
 
@@ -19,4 +22,4 @@ export const getStaticProps = async () => {
     };
 };
 
-export default Index;
+export default Index; 
