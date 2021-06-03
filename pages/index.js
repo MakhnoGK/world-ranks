@@ -1,5 +1,5 @@
-import Head from 'next/head';
+import Layout from '../components/Layout';
 
-const Index = () => <h1>World ranks</h1>;
+const Index = () => <Layout>main</Layout>;
 
 export default Index;
