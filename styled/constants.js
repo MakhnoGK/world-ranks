@@ -12,5 +12,6 @@ export const fonts = {
 };
 
 export const shadows = {
-    main: '0px 2px 8px rgba(0, 0, 0, 0.05)'
+    main    : '0 2px 8px rgba(0, 0, 0, 0.05)',
+    hovered : '0 4px 16px rgba(0, 0, 0, 0.1)'
 };

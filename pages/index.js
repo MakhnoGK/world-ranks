@@ -1,6 +1,8 @@
-import Layout      from '../components/Layout';
+import React          from 'react';
 
-import SearchInput from '../components/SearchInput';
+import Layout         from '../components/Layout';
+import SearchInput    from '../components/SearchInput';
+import CountriesTable from '../components/CountriesTable';
 
 const Index = ({ countries }) => (
     <Layout>
@@ -8,6 +10,7 @@ const Index = ({ countries }) => (
             Found {countries.length} countries
         </div>
         <SearchInput placeholder='Filter by name, region or subregion' />
+        <CountriesTable countries={countries} />
     </Layout>
 );
 

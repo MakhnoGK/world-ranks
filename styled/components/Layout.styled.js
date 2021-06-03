@@ -29,7 +29,8 @@ const LayoutStyled = styled.div`
     }
 
     .footer {
-        margin-top: 32px;
+        margin: 32px;
+        padding-bottom: 16px;
         text-align: center;
         font-size: 0.75rem;
     }
