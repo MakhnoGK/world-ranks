@@ -41,6 +41,7 @@ const CountriesTableStyled = styled.div`
         border-radius: 8px;
         box-shadow: ${shadows.main};
         transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+        user-select: none;
 
         &:hover {
             transform: translateY(-4px);
