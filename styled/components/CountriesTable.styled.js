@@ -15,6 +15,8 @@ const CountriesTableStyled = styled.div`
         .headingName,
         .headingPopulation {
             flex: 1;
+            display: flex;
+            align-items: center;
             padding: 20px;
             color: ${colors.textSecondary};
             font-weight: 500;
@@ -22,6 +24,10 @@ const CountriesTableStyled = styled.div`
 
         .headingName {
             text-align: left;
+        }
+
+        .headingPopulation {
+            justify-content: center;
         }
     }
 
