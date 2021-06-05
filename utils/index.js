@@ -9,3 +9,10 @@ export const orderCountries = (countries, value, direction = 'asc') => {
 
     return countries;
 }
+
+export const getCountryByAlpha3Code = async (alphaCode) => {
+    const res     = await fetch(`https://restcountries.eu/rest/v2/alpha/${alphaCode}`);
+    const country = await res.json();
+
+    return country;
+};
