@@ -4,9 +4,11 @@ import { colors } from '../constants';
 
 const LayoutStyled = styled.div`
     padding: 24px;
+    margin: 0 auto;
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    max-width: 1100px;
 
     .header {
         margin-bottom: 32px;
@@ -33,6 +35,22 @@ const LayoutStyled = styled.div`
         padding-bottom: 16px;
         text-align: center;
         font-size: 0.75rem;
+    }
+
+    @media screen and (min-width: 720px) {
+        .container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+
+            .left {
+                grid-column: 1 / span 4;
+            }
+
+            .right {
+                grid-column: 5 / span 8;
+            }
+        }
     }
 `;
 
