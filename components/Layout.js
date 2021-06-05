@@ -1,7 +1,9 @@
-import React        from 'react';
-import Head         from 'next/head';
+import React          from 'react';
+import Link           from 'next/link';
+import Head           from 'next/head';
 
-import LayoutStyled from '../styled/components/Layout.styled';
+import { MAIN_ROUTE } from '../contants/routes';
+import LayoutStyled   from '../styled/components/Layout.styled';
 
 const Layout = ({ children, title = 'World ranks' }) => (
     <LayoutStyled>
@@ -10,7 +12,9 @@ const Layout = ({ children, title = 'World ranks' }) => (
             <link rel='icon' href='/favicon.ico' />
         </Head>
         <header className='header'>
-            <h1 className='logo'>World<span>Ranks</span></h1>
+            <Link href={MAIN_ROUTE}>
+                <h1 className='logo'>World<span>Ranks</span></h1>
+            </Link>
         </header>
         <main className='main'>{children}</main>
         <footer className='footer'>
