@@ -19,7 +19,13 @@ const Layout = ({ children, title = 'World ranks' }) => (
         <main className='main'>{children}</main>
         <footer className='footer'>
             Hryhorii Khyzhniakov @ {' '}
-            <a href='https://axels.tech' rel='_noreferrer'>axels.tech</a>
+            <a
+                href='https://axels.tech'
+                rel='_noreferrer'
+                target="_blank"
+            >
+                axels.tech
+            </a>
         </footer>
     </LayoutStyled>
 );
