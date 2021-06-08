@@ -37,7 +37,23 @@ const LayoutStyled = styled.div`
         font-size: 0.75rem;
     }
 
-    @media screen and (min-width: 720px) {
+    @media (min-width: 768px) {
+        .main {
+            .countsContainer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .count {
+                    flex: 1;
+                }
+
+                .input {
+                    flex: 2;
+                }
+            }
+        }
+
         .container {
             display: grid;
             grid-template-columns: repeat(12, 1fr);

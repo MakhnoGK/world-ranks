@@ -23,17 +23,21 @@ const Index = ({ countries }) => {
     
     return (
         <Layout>
-            <div className='count'>
-                Found {countries.length} countries
+            <div className='countsContainer'>
+                <div className='count'>
+                    Found {countries.length} countries
+                </div>
+                <div className='input'>
+                    <SearchInput
+                        placeholder='Filter by name, region or subregion'
+                        onChange={handleChange}
+                    />
+                </div>
             </div>
-            <SearchInput
-                placeholder='Filter by name, region or subregion'
-                onChange={handleChange}
-            />
             <CountriesTable countries={filteredCountries} />
         </Layout>
     );
-}
+};
 
 Index.propTypes = {
     countries: PropTypes.array
@@ -45,7 +49,7 @@ export const getStaticProps = async () => {
 
     return {
         props: {
-            countries,
+            countries
         },
     };
 };
