@@ -1,5 +1,6 @@
 import React, { useState }  from 'react';
 import Link                 from 'next/link';
+import Image                from 'next/image';
 
 import SortArrow            from './CountriesTable/SortArrow';
 
@@ -34,8 +35,24 @@ const CountriesTable = ({ countries }) => {
             href = {`${COUNTRY_ROUTE}/${country.alpha3Code}`}
         >
             <div className='row'>
+                <div className='flag'>
+                    <Image
+                        src    = {country.flag}
+                        alt    = {country.name}
+                        width  = {59}
+                        height = {39}
+                    />
+                </div>
                 <div className='name'>{country.name}</div>
-                <div className='population'>{country.population}</div>
+                <div className='population'>{country.population || '-'}</div>
+                <div className='area'>{country.area || '-'}</div>
+                <div className='gini'>
+                    {
+                        country.gini
+                            ? `${country.gini}%`
+                            : '-'
+                    }
+                </div>
             </div>
         </Link>
     );
@@ -43,6 +60,7 @@ const CountriesTable = ({ countries }) => {
     return (
         <CountriesTableStyled>
             <div className='heading'>
+                <div className='headingFlag' />
                 <button
                     className = 'headingName'
                     name      = 'name'
@@ -60,6 +78,26 @@ const CountriesTable = ({ countries }) => {
                 >
                     <div>Population</div>
                     {value === 'population' && (
+                        <SortArrow direction={direction} />
+                    )}
+                </button>
+                <button
+                    className = 'headingArea'
+                    name      = 'area'
+                    onClick   = {() => setValueAndDirection('area')}
+                >
+                    <div>Area (km<sup>2</sup>)</div>
+                    {value === 'area' && (
+                        <SortArrow direction={direction} />
+                    )}
+                </button>
+                <button
+                    className = 'headingGini'
+                    name      = 'gini'
+                    onClick   = {() => setValueAndDirection('gini')}
+                >
+                    <div>Gini index</div>
+                    {value === 'gini' && (
                         <SortArrow direction={direction} />
                     )}
                 </button>

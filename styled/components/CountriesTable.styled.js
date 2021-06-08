@@ -12,11 +12,18 @@ const CountriesTableStyled = styled.div`
             background-color: transparent;
         }
 
-        .headingName,
-        .headingPopulation {
+        .headingFlag {
             flex: 1;
+        }
+
+        .headingName,
+        .headingPopulation,
+        .headingArea,
+        .headingGini {
+            flex: 4;
             display: flex;
             align-items: center;
+            justify-content: center;
             padding: 20px;
             color: ${colors.textSecondary};
             font-weight: 500;
@@ -26,13 +33,14 @@ const CountriesTableStyled = styled.div`
             text-align: left;
         }
 
-        .headingPopulation {
-            justify-content: center;
+        .headingName {
+            justify-content: flex-start;
         }
     }
 
     .row {
         display: flex;
+        align-items: center;
         padding: 20px;
         margin-bottom: 16px;
         font-weight: 500;
@@ -49,12 +57,45 @@ const CountriesTableStyled = styled.div`
         }
 
         .name {
-            flex: 1;
+            flex: 4;
             text-align: left;
         }
 
         .population {
+            flex: 4;
+        }
+
+        .area {
+            flex: 4;
+        }
+
+        .gini {
+            flex: 4;
+        }
+
+        .flag {
             flex: 1;
+            margin-right: 8px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .heading {
+            &Gini,
+            &Area {
+                display: none !important;
+            }
+        }
+
+        .row {
+            .area,
+            .gini {
+                display: none;
+            }
         }
     }
 `;
