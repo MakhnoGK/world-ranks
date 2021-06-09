@@ -12,22 +12,35 @@ const LayoutStyled = styled.div`
 
     .header {
         margin-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         
         .logo {
             font-size: 2rem;
             font-weight: 900;
-            color: ${colors.textSecondary};
+            color: ${({ theme }) => theme.colors.textSecondary};
             user-select: none;
 
             span {
-                color: ${colors.primary};
+                color: ${({ theme }) => theme.colors.primary};
             }
+        }
+
+        .themeSwitcher {
+            display: flex;
+            align-items: center;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            padding: 0;
+            color: ${({ theme }) => theme.colors.secondary};
         }
     }
 
     .count {
         margin: 12px 0;
-        color: ${colors.textSecondary};
+        color: ${({ theme }) => theme.colors.textSecondary};
     }
 
     .footer {

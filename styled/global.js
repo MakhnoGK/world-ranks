@@ -8,8 +8,8 @@ const global = createGlobalStyle`
         padding: 0;
         margin: 0;
         font-family: ${fonts.fontFamily};
-        background-color: ${colors.background};
-        color: ${colors.text};
+        background-color: ${({ theme }) => theme.colors.background};
+        color: ${({ theme }) => theme.colors.text};
     }
 
     a {

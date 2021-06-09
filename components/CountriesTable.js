@@ -102,7 +102,7 @@ const CountriesTable = ({ countries }) => {
                     )}
                 </button>
             </div>
-            {orderedCountries.map(renderCountries)}
+            {orderedCountries?.map(renderCountries)}
         </CountriesTableStyled>
     );
 }

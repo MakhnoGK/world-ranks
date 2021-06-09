@@ -1,10 +1,20 @@
 export const colors = {
-    text: '#124a63',
-    textSecondary   : '#b3c5cd',
-    primary         : '#21b6b7',
-    background      : '#f9f9f9',
-    backgroundDark  : '#eef3f6',
-    backgroundLight : '#ffffff',
+    light: {
+        text            : '#124a63',
+        textSecondary   : '#b3c5cd',
+        primary         : '#21b6b7',
+        background      : '#f9f9f9',
+        backgroundDark  : '#eef3f6',
+        backgroundLight : '#ffffff'
+    },
+    dark: {
+        text            : '#f0f0f0',
+        textSecondary   : '#b3c5cd',
+        primary         : '#21b6b7',
+        background      : '#252329',
+        backgroundDark  : '#3c393f',
+        backgroundLight : '#120f13'
+    }
 };
 
 export const fonts = {
