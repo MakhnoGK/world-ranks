@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { colors, shadows } from '../../constants';
 
 const DetailPanelStyled = styled.div`
-    background-color: ${colors.backgroundLight};
+    background-color: ${({ theme }) => theme.colors.backgroundLight};
     box-shadow: ${shadows.main};
     border-radius: 8px;
     padding: 20px;

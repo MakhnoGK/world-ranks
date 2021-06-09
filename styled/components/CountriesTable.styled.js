@@ -25,7 +25,7 @@ const CountriesTableStyled = styled.div`
             align-items: center;
             justify-content: center;
             padding: 20px;
-            color: ${colors.textSecondary};
+            color: ${({ theme }) => theme.colors.textSecondary};
             font-weight: 500;
         }
 
@@ -45,7 +45,7 @@ const CountriesTableStyled = styled.div`
         margin-bottom: 16px;
         font-weight: 500;
         text-align: center;
-        background-color: ${colors.backgroundLight};
+        background-color: ${({ theme }) => theme.colors.backgroundLight};
         border-radius: 8px;
         box-shadow: ${shadows.main};
         transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
