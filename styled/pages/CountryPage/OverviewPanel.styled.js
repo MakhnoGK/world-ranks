@@ -5,7 +5,7 @@ const CountryPageStyled = styled.div`
     padding: 20px;
     border-radius: 8px;
     box-shadow: ${shadows.main};
-    background-color: ${colors.backgroundLight};
+    background-color: ${({ theme }) => theme.colors.backgroundLight};
     margin-bottom: 20px;
 
     img {
@@ -36,8 +36,7 @@ const CountryPageStyled = styled.div`
 
         .label {
             font-size: 14px;
-            color: ${colors.textSecondary};
-            
+            color: ${({ theme }) => theme.colors.textSecondary};
         }
     }
 `;

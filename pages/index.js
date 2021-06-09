@@ -8,7 +8,7 @@ import CountriesTable      from '../components/CountriesTable';
 const Index = ({ countries }) => {
     const [keyword, setKeyword] = useState('');
 
-    const filteredCountries = countries.filter(
+    const filteredCountries = countries?.filter(
         (country) =>
             country.name.toLowerCase().includes(keyword)
             || country.region.toLowerCase().includes(keyword)
@@ -25,7 +25,7 @@ const Index = ({ countries }) => {
         <Layout>
             <div className='countsContainer'>
                 <div className='count'>
-                    Found {countries.length} countries
+                    Found {countries?.length} countries
                 </div>
                 <div className='input'>
                     <SearchInput
@@ -50,7 +50,7 @@ export const getStaticProps = async () => {
     return {
         props: {
             countries
-        },
+        }
     };
 };
 
